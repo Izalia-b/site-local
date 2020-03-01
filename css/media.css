@@ -1,0 +1,372 @@
+@media (max-width: 1400px) {
+    .interactive-mosaic_description {
+        width: 9.25rem
+    }
+
+    .interactive-mosaic__text1 {
+        font-size: 1rem;
+        
+    }
+
+    .interactive-mosaic__links1 {
+        margin-left: -0.2rem;
+    }
+
+    .interactive-mosaic__text2 {
+        font-size: 0.8rem;
+    }
+
+    .interactive-mosaic__hr {
+     display: none;
+    }
+}
+
+@media (max-width:1200px) {
+    p {
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 1000px) {
+    html {
+        font-size: 17px;
+    }
+}
+
+@media (max-width: 999px) {
+    .interactive-mosaic_description {
+        width: 15.75rem
+    }
+
+    .interactive-mosaic__text1 {
+        font-size: 1.8rem;
+        
+    }
+
+    .interactive-mosaic__links1 {
+        margin-left: 0.4rem;
+    }
+
+    .interactive-mosaic__text2 {
+        font-size: 1.2rem;
+    }
+    .owl-nav{
+        top: -9.6rem;
+        position: relative;
+        font-size: 3rem;
+    }
+
+}
+
+@media (max-width: 800px) {
+    .content {
+        width: 38rem;
+    }
+
+    .interactive {
+        width: 37rem;
+    }
+
+    .navigation__li {
+        margin-left: 0.5rem;
+    }
+
+    .navigation {
+        padding-left: 0;
+    }
+
+    .logo {
+        width: 20%;
+    }
+
+    .city {
+        width: 20%;
+    }
+
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .descriptors__second {
+        font-size: 2.1rem;
+    }
+
+    .block1 {
+        min-height: 0;
+    }
+
+    .welcome {
+        width: 22rem;
+        right: 0.9rem;
+        top: -16.4rem;
+    }
+
+    .table-wrap {
+        overflow: auto;
+    }
+
+    .movie-table {
+        width: 800px;
+    }
+
+    .interactive-mosaic__text1 {
+        font-size: 1.2rem;
+    }
+
+    .interactive-mosaic_description {
+        width: 11rem;
+    }
+
+    .interactive-mosaic__text1 {
+        margin-bottom: 0rem;
+    }
+
+    .interactive-mosaic__links {
+        margin-left: -1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .benefit-flex {
+        display: inline-block;
+    }
+
+    .benefit {
+        width: 33%;
+        float: right;
+    }
+
+    .city {
+        display: none;
+    }
+
+    .menu-burger span,
+    .menu-burger::before,
+    .menu-burger::after {
+        content: "";
+        width: 100%;
+        left: 0;
+        background: #fff;
+        height: 1px;
+        display: block;
+        position: absolute;
+    }
+
+    .menu-burger {
+        position: relative;
+        width: 2.5rem;
+        height: 1.4rem;
+        cursor: pointer;
+    }
+
+    .menu-burger span {
+        top: 0.7rem;
+    }
+
+    .menu-burger::before {
+        top: 0;
+    }
+
+    .menu-burger::after {
+        bottom: 0;
+    }
+
+    .navigation {
+        display: none;
+        position: fixed;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        padding: 3 rem 1 rem;
+        background: rgba(0, 0, 0, .7);
+        z-index: 2;
+        width: 8rem;
+    }
+
+    .navigation li {
+        display: inline-block;
+        margin-bottom: 1rem;
+    }
+
+    .logo {
+        width: 30%
+    }
+
+    .menu-wrap {
+        width: 20%;
+        float: right;
+    }
+
+    .city {
+        width: 40%;
+    }
+}
+
+@media (max-width: 600px) {
+    .content {
+        width: 30rem;
+    }
+
+    .interactive {
+        width: 29rem;
+    }
+
+    .welcome {
+        position: static;
+        width: 100%;
+    }
+
+    .interactive-flex {
+        grid-template-columns: 1fr 1fr;
+        grid-template-areas:
+            "col1 col2"
+            "col3 col4"
+            "col5 col6"
+            "col7 col8"
+            "col9 col10"
+            "col11 col12";
+    }
+
+    h1 {
+        font-size: 3.3rem;
+    }
+
+    .descriptors__second {
+        font-size: 1.9rem;
+    }
+
+    .gift>img {
+        position: static;
+    }
+
+    .gift {
+        padding-left: 0;
+        padding-top: 0;
+    }
+
+    .first-screen {
+        padding-bottom: 14.3rem;
+    }
+
+    .interactive-mosaic_description {
+        width: 13.35rem;
+    }
+
+    .benefit {
+        width: 50%;
+        height: 25rem;
+    }
+
+    .b3 {
+        margin-right: 8rem
+    }
+}
+
+@media (max-width: 599px) {
+    .interactive-mosaic_description {
+        width: 29.05rem
+    }
+
+    .interactive-mosaic__text1 {
+        font-size: 3.6rem;
+        
+    }
+
+    .interactive-mosaic__links1 {
+        margin-left: 1.7rem;
+    }
+
+    .interactive-mosaic__text2 {
+        font-size: 2.2rem;
+    }
+    .owl-nav{
+        top: -rem;
+        position: relative;
+        font-size: 3rem;
+    }
+}
+
+
+@media (max-width: 400px) {
+    .content {
+        width: 20rem;
+    }
+
+    .interactive {
+        width: 19rem;
+    }
+
+    .interactive-flex {
+        grid-template-columns: 1fr;
+    }
+
+    .interactive-flex {
+        grid-template-areas:
+            "col1"
+            "col2"
+            "col3"
+            "col4"
+            "col5"
+            "col6"
+            "col7"
+            "col8"
+            "col9"
+            "col10"
+            "col11"
+            "col12";
+    }
+
+    .interactive-mosaic_description {
+        width: 17.45rem;
+    }
+
+    h1 {
+        font-size: 3.1rem;
+    }
+
+    .descriptors__second {
+        font-size: 1.6rem;
+    }
+
+    .benefit {
+        margin-right: 5rem;
+        height: 29rem;
+    }
+
+}
+
+@media (max-width: 320px) {
+    .content {
+        width: 16rem;
+    }
+
+    .interactive {
+        width: 14rem;
+    }
+
+
+    .interactive-mosaic_description {
+        width: 14.05rem;
+    }
+
+    .logo {
+        width: 50%;
+    }
+
+    .city {
+        width: 51%;
+    }
+
+    h1 {
+        font-size: 3rem;
+    }
+
+    .descriptors__second {
+        font-size: 1.6rem;
+    }
+
+    .benefit {
+        margin-right: 4rem;
+        height: 33rem;
+    }
+}
