@@ -529,12 +529,12 @@
                     </div>
                     </a>
                     <div class="goodbye">
-                        <p>
-                            Hope we see you at the event!
-                            <br>
-                            All Rights Reserved. Envato Bangladesh 2015
+                    <p>
+                        Hope we see you at the event!
+                        <br>
+                        All Rights Reserved. Envato Bangladesh 2015
 
-                        </p>
+                    </p>
 
                     </div>
                 </div>
