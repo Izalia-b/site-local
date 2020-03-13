@@ -9,8 +9,7 @@
     <title>Кинотеатр Иннополис</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/main.css?4" />
-    <link rel="stylesheet" href="css/media.css" />
-
+    <!-- <link rel="stylesheet" href="css/media.css" /> -->
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
 </head>
@@ -43,7 +42,6 @@
                                 <li class="navigation__li">
                                     <a class="link-menu" href="#contacts">Контакты</a>
                                 </li>
-
                             </ul>
                         </nav>
                     </div>
@@ -147,7 +145,6 @@
                             </tr>
                         </thead>
                         <tbody>
-
                         </tbody>
                         <tfoot>
                         </tfoot>
@@ -254,8 +251,6 @@
                             <br>
                             <div aria-label="Поставьте галочку если вы согласны с обработкой персональных данных" aria-required="true">
                                 <input type="hidden" name="agree" value="">
-                                <!--Для того чтобы
-                                понять была галочка поставленна или нет, иначе ничего вообще не создасться -->
                                 <input id="agree" type="checkbox" name="agree" class="checkbox-required">
                                 <label for="agree"> Я согласен на обработку персональных данных</label>
                             </div>
@@ -273,27 +268,6 @@
                         </div>
                         <br>
             </form>
-            <!-- <div aria-label="Выберете одну из двух позиций" name="client_choice2">
-                        <input id="one" type="radio" name="some" value="1">
-                        <label for="one">Выбор 1</label>
-                        <br>
-                        <input id="two" type="radio" name="some" value="2">
-                        <label for="two">Выбор 2</label>
-                    </div>
-                    <div aria-label="Напишите коментарий" name="client_comment">
-                        <textarea>
-                Тело тега
-                </textarea>
-                    </div>
-                    <div aria-label="Поставьте галочку если вы согласны с обработкой персональных данных"
-                        aria-required="true">
-                        <input id="agree" type="checkbox">
-                        <label for="agree"> Я согласен на обработку персональных данных</label>
-                    </div>
-                    
-                    <div>
-                        <input type="email" placeholder="email" name="client_email" aria-label="Введите email">
-                    </div> -->
             <div>
                 <button id="sendPresentInfo" type="submit">Заказать</button>
                 <button id="nextTry" type="submit">Отправить повторно</button>
@@ -302,7 +276,6 @@
     </div>
     </div>
     </div>
-
     <div id="orderForm">
         <div class="modal">
             <button id="closeOrderForm">X</button>
@@ -322,7 +295,7 @@
                 <div>
                     <span>Стоимость билета:</span>
                     <span id="orderFilmPrice"></span>
-                    </br>
+                    <br>
                     <span>Количество билетов:</span>
                     <input type="number" min=1 id="orderFilmCountTicket">
                 </div>
@@ -346,13 +319,11 @@
             <div>
                 <span>Ваш выбор:</span>
                 <span class="clientBrone"></span>
-
             </div>
         </div>
     </div>
     </div>
     </div>
-
     <footer>
         <div class="block9">
             <div class="content">
@@ -361,7 +332,7 @@
                         <a class="circle1" href="https://ru-ru.facebook.com/">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 48 48">
                                 <defs>
-                                    <filter filterUnits="userSpaceOnUse" id="Filter_1" x="0px" y="0px" width="48px" height="48px">
+                                    <filter filterUnits="userSpaceOnUse" id="Filter_1" x="0px" y="0px">
                                         <feOffset in="SourceAlpha" dx="0" dy="2" />
                                         <feGaussianBlur result="blurOut" stdDeviation="1" />
                                         <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
@@ -374,8 +345,7 @@
                                             <feMergeNode in="SourceGraphic" />
                                         </feMerge>
                                     </filter>
-                                    <filter filterUnits="userSpaceOnUse" id="Filter_2" x="0px" y="0px" width="48px" height="48px">
-
+                                    <filter filterUnits="userSpaceOnUse" id="Filter_2" x="0px" y="0px">
                                         <feGaussianBlur result="blurOut" stdDeviation="1" />
                                         <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
                                         <feComposite operator="atop" in="floodOut" in2="blurOut" />
@@ -399,7 +369,7 @@
                         <a class="circle1" href="https://twitter.com/twitter">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 48 48">
                                 <defs>
-                                    <filter filterUnits="userSpaceOnUse" id="Filter_1" x="0px" y="0px" width="49px" height="49px">
+                                    <filter filterUnits="userSpaceOnUse" id="Filter_1" x="0px" y="0px">
                                         <feOffset in="SourceAlpha" dx="0" dy="1" />
                                         <feGaussianBlur result="blurOut" stdDeviation="1" />
                                         <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
@@ -422,7 +392,7 @@
                         <a class="circle1" href="https://www.instagram.com/">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 48 48">
                                 <defs>
-                                    <filter filterUnits="userSpaceOnUse" id="Filter_1" x="0px" y="0px" width="49px" height="49px">
+                                    <filter filterUnits="userSpaceOnUse" id="Filter_1" x="0px" y="0px">
                                         <feOffset in="SourceAlpha" dx="0" dy="1" />
                                         <feGaussianBlur result="blurOut" stdDeviation="1" />
                                         <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
@@ -445,7 +415,7 @@
                         <a class="circle1" href="https://www.google.ru/">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 48 48">
                                 <defs>
-                                    <filter filterUnits="userSpaceOnUse" id="Filter_1" x="0px" y="0px" width="49px" height="49px">
+                                    <filter filterUnits="userSpaceOnUse" id="Filter_1" x="0px" y="0px">
                                         <feOffset in="SourceAlpha" dx="0" dy="1" />
                                         <feGaussianBlur result="blurOut" stdDeviation="1" />
                                         <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
@@ -468,7 +438,7 @@
                         <a class="circle1" href="https://tlgrm.ru/">
                             <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewbox="0 0 48 48">
                                 <defs>
-                                    <filter filterUnits="userSpaceOnUse" id="Filter_1" x="0px" y="0px" width="48px" height="48px">
+                                    <filter filterUnits="userSpaceOnUse" id="Filter_1" x="0px" y="0px">
                                         <feOffset in="SourceAlpha" dx="0" dy="1" />
                                         <feGaussianBlur result="blurOut" stdDeviation="1" />
                                         <feFlood flood-color="rgb(0, 0, 0)" result="floodOut" />
@@ -490,28 +460,19 @@
                     </div>
                     </a>
                     <div class="goodbye">
-                    <p>
-                        Hope we see you at the event!
-                        <br>
-                        All Rights Reserved. Envato Bangladesh 2015
+                        <p>
+                            Hope we see you at the event!
+                            <br>
+                            All Rights Reserved. Envato Bangladesh 2015
 
-                    </p>
+                        </p>
 
                     </div>
                 </div>
             </div>
         </div>
     </footer>
-    
-    <!-- <script src="js/getPresent.js"></script>
-    <script src="js/films.js"></script> -->
-    <!-- <script src="js/jquery-3.4.1.min.js"></script> -->
-    <!-- <script src="js/owl.carousel.min.js"></script> -->
-    <!-- <script type="module" src="js/ajax.js"></script>
-    <script type="module" src="js/buttonAndOwl.js"></script> -->
     <script type="module" src="js/main.js?3"></script>
-
-    
 </body>
 
 </html>

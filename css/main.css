@@ -4,87 +4,8 @@
    License: none (public domain)
 */
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video
+ {
     margin: 0;
     padding: 0;
     border: 0;
@@ -665,6 +586,7 @@ p+p {
 
 /**Компоненты*/
 
+/*Первый экран*/
 .block1 {
     background-image: url(../images/top_bg.jpg);
     background-position: center;
@@ -763,7 +685,7 @@ p+p {
     font-weight: 400;
 
 }
-
+/**Преимущества*/
 .block2 {
     margin-bottom: 4.6rem;
     position: relative;
@@ -849,7 +771,7 @@ p+p {
 .big3 {
     margin-left: 0.4rem;
 }
-
+/**Таблица*/
 
 .block3 {
     margin-bottom: 7.8rem;
@@ -952,7 +874,7 @@ p+p {
     color :darksalmon;
     cursor: pointer;
 }
-
+/* Подарок */
 .block4 {
     background-image: url(../images/b4_bg.jpg);
     background-position: center;
@@ -1014,7 +936,7 @@ p+p {
     z-index: 1;
     height: 18rem;
 }
-
+/* Карусель*/
 .block5 {
     margin-top: -4.9rem;
 }
@@ -1048,42 +970,6 @@ p+p {
 
 .interactive-mosaic_poster img {
     max-width: 100%;
-}
-
-.spider {
-    grid-area: col2;
-}
-
-.spider2 {
-    grid-area: col5;
-}
-
-.spider3 {
-    grid-area: col8;
-}
-
-.dog {
-    grid-area: col1;
-}
-
-.dog2 {
-    grid-area: col4;
-}
-
-.dog3 {
-    grid-area: col7;
-}
-
-.people {
-    grid-area: col3;
-}
-
-.people2 {
-    grid-area: col6;
-}
-
-.people3 {
-    grid-area: col11;
 }
 
 .interactive-mosaic_inner1 {
@@ -1154,12 +1040,12 @@ p+p {
     position: absolute;
     right: -1.5rem;
 }
-
+/* Карта */
 .block6 {
     height: 23.2rem;
     max-width: 100%;
 }
-
+/* Подвал */
 .block9 {
     background: #90d23d;
 }
@@ -1174,21 +1060,14 @@ p+p {
     margin-bottom: 0.3rem;
 }
 
-/* .circle svg {
-    width: 2.28rem;
-} */
+
 
 .circle1 svg {
-    /* display: inline-block;
-    margin-left: 0.35rem;
-    box-shadow: 0px 1px 1px 0px rgba(0, 0, 0, 0.25);
-    border-radius: 100%; */
     width: 2.28rem;
     filter: url(#Filter_1);
 }
 
 .circle1 svg:hover {
-    /* box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25); */
     filter: url(#Filter_2);
 }
 
@@ -1244,6 +1123,8 @@ p+p {
     font-size: 0.9rem;
     color: #ffffff;
 }
+
+/* Всплывающие окна */
 #modalPresent,
 #orderForm,
 #modal_city{
@@ -1263,10 +1144,10 @@ p+p {
 .conteiner3{
     padding: 2rem 0 2rem 2rem ;
     text-align: center;
-    font-size: 30px;
+    font-size: 1.5rem;
 }
 .modal_city_your{
-    margin-bottom: 20px;
+    margin-bottom: 1rem;
 }
 #modalPresent .modal,
 #orderForm .modal,
@@ -1276,14 +1157,14 @@ p+p {
     margin: 0 auto;
     border-radius: 1rem;
     position: relative;
-    padding-bottom: 30px;
+    padding-bottom: 1.5rem;
 }
 #closeModalPresent,
 #closeOrderForm,
 #closeModalCity{
     position: absolute;
     right: 1rem;
-    font-size: 20px;
+    font-size: 1rem;
     top: 1rem;
     cursor: pointer;
 }
@@ -1299,71 +1180,11 @@ form {
 }
 
 .error-input {
-    font-size: 12px;
+    font-size:  .6rem;
     color: rgb(255,0,0)
 }
 
 
-/* input,
-textarea,
-select {
-    font-size: 0.95rem;
-    color: #6c6c6c;
-    padding: 0.75rem 0.55rem;
-    border: 1px solid #bebebe;
-    border-radius: 0.25rem;
-   
-    outline: 0;
-    transition: .2s;
-}
-
-select {
-    -webkit-appearance: none;
-    -moz-appearance: none;
-    appearance: none;
-    background: url(../img/down-arrow.svg) 96% center / 5% norepeat #fff;
-}
-
-input[type="radio"],
-input[type="checkbox"] {
-    display: none;
-}
-
-input[type="radio"]+label,
-input[type="checkbox"]+label {
-    font-size: 0.8rem;
-    padding-left: 1.15rem;
-    position: relative;
-}
-
-input[type="radio"]+label::before,
-input[type="checkbox"]+label::before {
-    content: '';
-    position: absolute;
-    left: 0;
-    top: 0.05rem;
-    width: 0.7rem;
-    height: 0.07rem;
-    border: 0.05rem solid #000;
-}
-
-input[type="radio"]+label::before {
-    border-radius: 100%;
-}
-
-input[type="textarea"] {
-    height: 12.5rem;
-    resize: none;
-}
-
-
-
-input[type="button"],
-button {а
-    border-right: 0.05rem solid transparent;
-    border-bottom: 0.05rem solid transparent;
-    border: 1px solid #636060;
-} */
 .file1 {
     position: absolute;
     opacity: 0;
@@ -1387,17 +1208,30 @@ button {а
     cursor: pointer;
     border-radius: 0.25rem;
 }
+#nextTry{
+    display: none;
+}
+.ajax-loader{
+    position: fixed;
+    left: 0;
+    right: 0;
+    top:0;
+    bottom: 0;
+    z-index: 1000;
+    background: url("../images/1.gif") no-repeat center,rgba(255,255,255,.5);
+}
+ /* Заказ билета */
 .places{
     display: flex;
-    margin:30px;
+    margin: 1.5rem;
 }
 .placeDiv{
-width: 40px;
-height: 40px;
-font-size: 23px;
+width:  2rem;
+height:  2rem;
+font-size: 1.15rem;
 font-weight: bold;
-border: 2px solid #000;
-margin-right: 5px;
+border: 0.1rem solid #000;
+margin-right: 0.25rem;
 text-align: center;
 }
 .placeBrone{
@@ -1412,27 +1246,18 @@ text-align: center;
 .placeMove{
     background-color:grey;
 }
+/* Панель админа */
 .table-admin {
     border:1px solid black;
     border-collapse:collapse;
 }
 .table-admin-th{
-    width: 85px;
+    width: 4.25rem;
     padding: 1.4rem 0;
     border: 1px solid black;
 }
 .table-admin td{
     border: 1px solid black;
 }
-.ajax-loader{
-    position: fixed;
-    left: 0;
-    right: 0;
-    top:0;
-    bottom: 0;
-    z-index: 1000;
-    background: url("../images/1.gif") no-repeat center,rgba(255,255,255,.5);
-}
-#nextTry{
-    display: none;
-}
+
+
