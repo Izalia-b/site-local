@@ -741,7 +741,7 @@ p+p {
 }
 
 .benefit__screen img {
-    max-height: 100%;
+    height: 100%;
 }
 
 .benefit__screen1 {
@@ -761,7 +761,7 @@ p+p {
     position: absolute;
     top: 1.35rem;
     left: -4.5rem;
-    width: 9.75rem;
+    max-height: 85%;
 }
 
 .benefit__screen>p {
