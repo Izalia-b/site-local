@@ -17,7 +17,6 @@
 
 <body>
     <div class="block1">
-        <!--начало блока1-->
         <div class="content">
             <div class="first-screen">
                 <div class="logo-nav">
@@ -52,11 +51,6 @@
                         <a href="/" id="city_name">-Не определен-</a>
                     </div>
                 </div>
-
-
-
-
-
                 <div id="modal_city">
                     <div class="modal" style="widows: 300px;">
                         <div class="conteiner3">
@@ -67,9 +61,6 @@
                         </div>
                     </div>
                 </div>
-
-
-
                 <div class="descriptors">
                     <h1 class="descriptors__main">Закажите билет в кино</h1>
                     <div class="descriptors__second"> Всем покупателям подарок!</div>
@@ -77,7 +68,6 @@
             </div>
         </div>
     </div>
-    <!--конец блока1-->
     <div class="block2">
         <div class="content">
             <div class="advantages">
@@ -140,10 +130,8 @@
                     </div>
                 </div>
             </div>
-
         </div>
     </div>
-    <!--конец блока2-->
     <br>
     <div id="booking" class="block3">
         <div class="content">
@@ -156,7 +144,6 @@
                                 <th class="movie-header__h1"><a href="#">Начало сеанса</a></th>
                                 <th class="movie-header__h2"><a href="#">Название фильма</a></th>
                                 <th class="movie-header__h3"><a href="#">Жанр</a></th>
-                                <!-- <th class="movie-header__h4"><a href="#">Стоимость билета</a></th> -->
                             </tr>
                         </thead>
                         <tbody>
@@ -171,29 +158,9 @@
                     illum itaque molestiae mollitia nemo, nostrum officia quas ratione tempora temporibus veritatis vero
                     voluptates.</p>
             </div>
-            <div>
-                <h2>Новинки фильм</h2>
-                <table id="newFilm" class="movie-table">
-                    <thead>
-                        <tr class="movie-header">
-                            <th class="movie-header__h1"><a href="#">Начало сеанса</a></th>
-                            <th class="movie-header__h2"><a href="#">Название фильма</a></th>
-                            <th class="movie-header__h3"><a href="#">Жанр</a></th>
-                            <!-- <th class="movie-header__h4"><a href="#">Стоимость билета</a></th> -->
-                        </tr>
-                    </thead>
-                    <tbody>
-
-                    </tbody>
-                    <tfoot>
-                    </tfoot>
-                </table>
-            </div>
         </div>
     </div>
-    <!--конец блока3-->
     <div class="block4">
-        <!--начало блока4-->
         <div class="content">
             <div class="gift">
                 <img src="images/b4_img.png" title="Подарок" alt="Подарок">
@@ -222,10 +189,7 @@
             </div>
         </div>
     </div>
-    <!--конец блока4-->
-
     <div class="block5" id="films">
-        <!--начало блока5-->
         <div id="films" class="block-films">
             <div class="interactive">
                 <h2 class="interactive-films">Фильмы</h2>
@@ -235,13 +199,10 @@
                     repudiandae,
                     suscipit!</p>
                 <div id="sliderSection" class="interactive-flex owl-carousel">
-
                 </div>
             </div>
         </div>
     </div>
-
-    <!--конец блока5-->
     <div class="block6">
         <div id="contacts" class="content">
             <img src="https://via.placeholder.com/140*140.png">
