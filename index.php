@@ -9,7 +9,7 @@
     <title>Кинотеатр Иннополис</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/main.css?4" />
-    <!-- <link rel="stylesheet" href="css/media.css" /> -->
+    <link rel="stylesheet" href="css/media.css" /> 
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
 </head>

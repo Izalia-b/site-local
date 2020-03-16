@@ -970,6 +970,7 @@ p+p {
 
 .interactive-mosaic_poster img {
     max-width: 100%;
+    border-radius: 0.55rem;
 }
 
 .interactive-mosaic_inner1 {
@@ -979,7 +980,7 @@ p+p {
 
 .interactive-mosaic_description {
     position: absolute;
-    width: 14.85rem;
+    width: 12.15rem;
     left: 0;
     right: 0;
     height: 100%;
