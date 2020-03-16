@@ -25,6 +25,9 @@
     p {
         font-size: 0.9rem;
     }
+    .interactive-mosaic_description {
+    width: 10.95rem;
+    }
 }
 
 @media (max-width: 1000px) {
@@ -265,6 +268,9 @@
     .b3 {
         margin-right: 8rem
     }
+    .movie-header__h1, .movie-header__h2, .movie-header__h3 {
+        font-size: 1.3rem;
+    }2
 }
 
 /* @media (max-width: 599px) {
@@ -300,6 +306,19 @@
     .interactive {
         width: 19rem;
     }
+    h2 {
+        font-size: 1.6rem;
+    }
+    .welcome>h2 {
+        font-size: 1.6rem;
+    }
+    h3 {
+        font-size: 1.45rem;
+        
+    }
+    .logo img {
+            width: 150%;
+        }
 
     /* .interactive-flex {
         grid-template-columns: 1fr;
