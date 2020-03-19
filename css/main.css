@@ -1162,12 +1162,19 @@ p+p {
 }
 #closeModalPresent,
 #closeOrderForm,
-#closeModalCity{
+#closeModalCity
+{
     position: absolute;
     right: 1rem;
     font-size: 1rem;
     top: 1rem;
     cursor: pointer;
+}
+#closeMenuForm
+{
+    font-size: 1rem;
+    cursor: pointer;
+    margin-left: 6rem;
 }
 .movie-table__colona4{
     display: none;

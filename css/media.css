@@ -175,7 +175,7 @@
     }
 
     .navigation {
-        display: none;
+        display: none; 
         position: fixed;
         left: 0;
         top: 0;

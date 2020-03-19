@@ -3,6 +3,8 @@ let modalPresentWindow = document.getElementById(`modalPresent`)
 let closePresentWindow = document.getElementById(`closeModalPresent`)
 let sendPresentInfo = document.getElementById(`sendPresentInfo`)
 
+
+
 buttonShowModalPresent.onclick = function () {
     modalPresentWindow.style.display = `block`
 }
@@ -42,3 +44,15 @@ selectGuest.onchange = function () {
 }
 
 
+// Меню бургер
+let burgerShowMenu = document.getElementById(`menu-burge`)
+let closeBurgerMenu = document.getElementById(`closeMenuForm`)
+let burgerMenuWindow = document.getElementById(`navigation`)
+
+burgerShowMenu.onclick = function () {
+    burgerMenuWindow.style.display = `block`
+}
+
+closeBurgerMenu.onclick = function () {
+    burgerMenuWindow.style.display = `none`
+}

@@ -10,7 +10,6 @@ import '../node_modules/owl.carousel/dist/owl.carousel.js';
 import './films.js';
 import './getPresent.js';
 import './ajax.js';
-import './buttonAndOwl.js';
 
 
 const chooseFilm = new FilmsTable (films);

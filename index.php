@@ -9,7 +9,7 @@
     <title>Кинотеатр Иннополис</title>
     <link rel="icon" type="image/png" href="images/favicon.png" />
     <link rel="stylesheet" href="css/main.css?4" />
-    <link rel="stylesheet" href="css/media.css" /> 
+    <link rel="stylesheet" href="css/media.css" />
     <link rel="stylesheet" href="css/owl.theme.default.min.css">
     <link rel="stylesheet" href="css/owl.carousel.min.css">
 </head>
@@ -25,10 +25,11 @@
                         </a>
                     </div>
                     <div class="menu-wrap">
-                        <div class="menu-burger">
+                        <div class="menu-burger" id="menu-burge">
                             <span></span>
                         </div>
-                        <nav class="navigation">
+                        <nav class="navigation" id="navigation">
+                            <button id="closeMenuForm">X</button>
                             <ul>
                                 <li class="navigation__li">
                                     <a class="link-menu" href="#booking"> Заказать билет</a>
