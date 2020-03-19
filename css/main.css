@@ -1172,6 +1172,7 @@ p+p {
 }
 #closeMenuForm
 {
+    display: none; 
     font-size: 1rem;
     cursor: pointer;
     margin-left: 6rem;
