@@ -9,7 +9,7 @@ import '../node_modules/owl.carousel/dist/owl.carousel.js';
 
 import './films.js';
 import './getPresent.js';
-import './ajax.js';
+import './ajax.js?1';
 
 
 const chooseFilm = new FilmsTable (films);

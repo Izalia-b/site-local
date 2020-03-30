@@ -1,23 +1,22 @@
 <?php
-include('Database.php');
-include('MailFiles.php');
-
-if (isset($_FILES)) {
-    foreach ($_FILES as $file)
-        saveFiles($file);
-}
 
 require 'vendor/autoload.php';
 use PHPMailer\PHPMailer\PHPMailer; 
 use PHPMailer\PHPMailer\SMTP; 
 use PHPMailer\PHPMailer\Exception;
 
+include('Database.php');
+
+
+if (isset($_FILES)) {
+    foreach ($_FILES as $file)
+        saveFiles($file);
+}
+
+
+
 define('CLIENTS', __DIR__ . '/clients.txt');
 session_start();
-
-
-
-
 
 $pdo = new Database; //создание бд
 $pdo->connect(); //создание соединения с бд
@@ -41,6 +40,7 @@ $client = new Client;
 $errors = validate($_POST); //проверка формы есть ли имя
 
 if ($errors) { 
+    //echo 'неправильное имя';
     echo json_encode($errors);
 } else {
    
@@ -50,8 +50,7 @@ if ($errors) {
     // $client->saveToFile();//старое сохранение в файл
 
     $oldPhone = $pdo->getPhoneFromeTable($_POST['phone']);
-    print_r($oldPhone);
-    exit;
+  
 
     setcookie('name', $_POST['name']); //записывыем кук
     setcookie('phone', $_POST['phone']);
@@ -89,7 +88,7 @@ if ($errors) {
     ];
     
    echo json_encode($result);
-  
+  // echo 'неправильное имя';
   
     if( $result) {
         $data['result']= 'succes';
@@ -128,14 +127,14 @@ if ($errors) {
 
      
 
-    // header('location: /thanks.php?name=' . $_POST['name']); // переход если форма правильно заполнена 
+     header('location: /thanks.php?name=' . $_POST['name']); // переход если форма правильно заполнена 
   
 }
 //повторная отправка  запроса 
 
 function sendMailRepeat($client){
 
-    $mail=new PHPMailer();///????
+    $mail=new PHPMailer();
     try {
     // $mail->SMTPDebug = SMTP::DEBUG_SERVER;   
     $mail->isSMTP();                                            
@@ -143,13 +142,20 @@ function sendMailRepeat($client){
     $mail->SMTPAuth   = true;                                   
     $mail->Username   = 'izalia.bidonova@yandex.ru';// адрес с которого слаться будут ?                     
     $mail->Password   = 'ilovemy777';  // пароль от него                           
-    $mail->SMTPSecure ='ssl';         
+    $mail->SMTPSecure ='ssl';    
+    $mail->SMTPOptions =  array(
+     'ssl'=>array(
+         'verify_peer'=>false,
+         'verify_peer_name'=>false,
+         'allow_self_signed'=>true
+     )
+    )   ;  
     $mail->Port       = 465; // берем у яндекса  
     $mail->setFrom('izalia.bidonova@yandex.ru', 'Mailer');
     $mail->addAddress('bidonovy@mail.ru');         
 
     $mail->addAttachment( $GLOBALS['upload_file']);   //для загрузки файла в письмо           
-    $mail->isHTML(true);    //????  
+    $mail->isHTML(true);    
 
     //тема
     $mail->Subject = ' Request from site';
@@ -172,7 +178,7 @@ function sendMailRepeat($client){
 //функция отправки писем
 function sendMail($client,$file){
 
-    $mail=new PHPMailer();///????
+    $mail=new PHPMailer();///
     try {
     // $mail->SMTPDebug = SMTP::DEBUG_SERVER;   
     $mail->isSMTP();                                            
@@ -186,7 +192,7 @@ function sendMail($client,$file){
     $mail->addAddress('bidonovy@mail.ru');         
 
     $mail->addAttachment( $GLOBALS['upload_file']);   //для загрузки файла в письмо           
-    $mail->isHTML(true);    //????  
+    $mail->isHTML(true);    //
 
     //тема
     $mail->Subject = ' Request from site';
@@ -210,9 +216,9 @@ function sendMail($client,$file){
 // письмо пользователю
 function sendMailUsers($client){
 
-    $mail=new PHPMailer();///????
+    $mail=new PHPMailer();
     try {
-    // $mail->SMTPDebug = SMTP::DEBUG_SERVER;   
+   //$mail->SMTPDebug = SMTP::DEBUG_SERVER;   
     $mail->isSMTP();                                            
     $mail->Host       = 'smtp.yandex.ru'; // берем у яндекса                   
     $mail->SMTPAuth   = true;                                   
@@ -224,7 +230,7 @@ function sendMailUsers($client){
     $mail->addAddress($client->email);         
 
     $mail->addAttachment( $GLOBALS['upload_file']);   //для загрузки файла в письмо           
-    $mail->isHTML(true);    //????  
+    $mail->isHTML(true);    
 
     //тема
     $mail->Subject = ' Request from site';
@@ -247,7 +253,7 @@ function sendMailUsers($client){
 // письмо при ошибке на сервере 
 function sendErrorServer($client,$dataServer,$browser){
 
-    $mail=new PHPMailer();///????
+    $mail=new PHPMailer();
     try {
     // $mail->SMTPDebug = SMTP::DEBUG_SERVER;   
     $mail->isSMTP();                                            
@@ -261,7 +267,7 @@ function sendErrorServer($client,$dataServer,$browser){
     $mail->addAddress('bidonovy@mail.ru');         
 
     $mail->addAttachment( $GLOBALS['upload_file']);   //для загрузки файла в письмо           
-    $mail->isHTML(true);    //????  
+    $mail->isHTML(true);     
 
     //тема
     $mail->Subject = ' Request from site';
@@ -311,12 +317,10 @@ function saveFiles($file) // куда сохранять файлы и под к
 
 
 function validate($data) //проверка на наличие имени
-{
-    $return = [];
+{ $return =[];
     if (!isset($data['name']) || !$data['name']) {
         $return ['error_name']='Не заполнено имя';
     }
-    
     return $return;
 }
 
@@ -355,7 +359,7 @@ class Client //создание класса клиент
 
     // public function saveToFile()
     // {
-    //     $data = file_get_contents(CLIENTS); //???
+    //     $data = file_get_contents(CLIENTS); 
     //     $new_data = '';
     //     $new_data .= "\r\n" .'Имя пользователя' . $this->name . ';'."\r\n";
     //     if ($this->present) {
@@ -375,7 +379,7 @@ class Client //создание класса клиент
     //     }
     //     $new_data.= 'Time: '.date("d.m.Y").' '. date("H:i")."\r\n";
     //     $new_data.='____________';
-    //    file_put_contents(CLIENTS, $data . $new_data); //???
+    //    file_put_contents(CLIENTS, $data . $new_data); 
     // }
 }
   //  if (validate($_POST)) {

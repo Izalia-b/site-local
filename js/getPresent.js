@@ -16,7 +16,7 @@ sendPresentInfo.onclick = function () {
     let nameGuest = document.getElementById(`name_guest`)
     let selectGuest = document.getElementById(`select_guest`)
 
-    if (nameGuest.value) {
+    if (nameGuest.value !=0) {
         //console.log(`nameGuest`, nameGuest.value)
         nameGuest.style.border = `1px solid #bebebe`
     } else {

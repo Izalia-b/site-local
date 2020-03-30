@@ -202,20 +202,19 @@
         </div>
     </div>
     <div class="block6">
-        <div id="contacts" class="content">
-            <img src="https://via.placeholder.com/140*140.png">
-        </div>
+        <div id="contacts" >
+        <script type="text/javascript" charset="utf-8" async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa847a081d4507d903b03b9776dd39bd8fb9ccb096c6948039f43db026084a94d&amp;width=100%25&amp;height=400&amp;lang=ru_RU&amp;scroll=true"></script>        </div>
     </div>
     <div class="block7">
         <footer>
         </footer>
         <div id="modalPresent">
-            <form class="ajax-form" id="form_with_file">
+            <form class="ajax-form" id="form_with_file" >
                 <div id="order" class="modal" style="widows: 300px;">
                     <button id="closeModalPresent">X</button>
                     <div class="conteiner2">
                         <div>
-                            <input id="name_guest" type="text" name="name" placeholder="Имя*" value="<?php echo isset($_COOKIE['name']) ? $_COOKIE['name'] : '' ?>" aria-required="true" aria-label="Введите имя">
+                            <input id="name_guest"  class="input-form" type="text" name="name" placeholder="Имя*" value="<?php echo isset($_COOKIE['name']) ? $_COOKIE['name'] : '' ?>" aria-required="true" aria-label="Введите имя">
                         </div>
                         <p class="input-error input-error_name"></p>
                         <?php if (isset($_GET['error_name']) && $_GET['error_name']) { ?>
@@ -223,7 +222,7 @@
                         <?php } ?>
                         <br>
                         <div>
-                            <input id="phone_guest" type="tel" id="phone" name="phone" placeholder="+79999999999" value="<?php echo isset($_COOKIE['phone']) ? $_COOKIE['phone'] : '' ?>" aria-required="true" aria-label="Введите телефон">
+                            <input id="phone_guest" type="tel"  class="input-form" id="phone" name="phone" placeholder="+79999999999" value="<?php echo isset($_COOKIE['phone']) ? $_COOKIE['phone'] : '' ?>" aria-required="true" aria-label="Введите телефон">
                         </div>
                         <br>
                         <div>

@@ -583,6 +583,9 @@ p+p {
     max-width: 51.5rem;
     margin: 0 auto;
 }
+.map{
+    margin-left: 1rem;
+}
 
 /**Компоненты*/
 
@@ -1228,6 +1231,9 @@ form {
     bottom: 0;
     z-index: 1000;
     background: url("../images/1.gif") no-repeat center,rgba(255,255,255,.5);
+}
+.rightChoice{
+    border: 1px solid #bebebe;
 }
  /* Заказ билета */
 .places{

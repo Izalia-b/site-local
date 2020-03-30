@@ -10,7 +10,7 @@ let cities;
  */
 
 $.ajax({
-    url: syper_url ,
+    url: syper_url,
     dataType: "json",
     error: function () {
         $('#modal_city').show(500)
@@ -90,121 +90,60 @@ $('.checkbox-required').on('focus', function () {
 
 
 
-let file_api = (window.File && window.FileReader && window.FileList && window.Bloob) ? true : false; //?????
-    //смена надписи загрузки файла 
-   let inp = $('#file'),
+let file_api = (window.File && window.FileReader && window.FileList && window.Bloob) ? true : false; 
+//смена надписи загрузки файла 
+let inp = $('#file'),
     lbl = $('#file-label');
 
-    inp.on('change', function () {
-        let filename;
-        if (file_api) {
-            filename = inp[0].files[0].name; // из массива полученого в инпуте ?????
-        } else {
-            filename = inp.val().replace("C:\\fakepath\\", ''); //замена на пустое значение ???
-        }
-        console.log(filename);
-        if (!filename.length) return;
-        lbl.html(filename);
-    })
+inp.on('change', function () {
+    let filename;
+    if (file_api) {
+        filename = inp[0].files[0].name; // из массива полученого в инпуте 
+    } else {
+        filename = inp.val().replace("C:\\fakepath\\", ''); //замена на пустое значение 
+    }
+    // console.log(filename);
+    if (!filename.length) return;
+    lbl.html(filename);
+})
 
-
+$('.input-form').on('focus', function () {
+    $(this).next('.input-required').remove();
+    $(this).addClass('rightChoice')
+})
 
 
 $('.ajax-form').on('submit', function (e) {
     e.preventDefault();
     let form = document.forms.form_with_file,
-    jqform = $(this),
-        hasValue = true;
-        //data = form.serialize();
+    jqform = $(this);
+    let hasValue = true;
     jqform.find('.input-form').each(function () {
         if (!$(this).val()) {
             $(this).after('<p class="input-required">Поле обязательно для заполнения</p>');
             hasValue = false;
-
         }
     });
     if (hasValue) {
         $('body').append('<div class="ajax-loader"></div>');
-      
         //создаем данные формы 
-        let formData = new FormData(form), // FormData???
-         //создаем соединение  и открываем его
-        xhr = new XMLHttpRequest();
+        let formData = new FormData(form),
+            //создаем соединение  и открываем его
+            xhr = new XMLHttpRequest();
         xhr.open('POST', 'serv.php');
-            setTimeout(function () {
-                xhr.onreadystatechange = function () {
-                    if (xhr.readyState==4 && xhr.status ==200){
-                        $('.ajax-loader').remove();
-                        console.log(xhr.responseText);
-                    msg = $.parseJSON(xhr.responseText);//???
-                    if(msg.error_name){
-                        console.log(msg.error_name);
-                    }
-                    } else {
-                    // <?php  
-                    //     $dataServer = date('d M Y H:i:s');
-                    //     $browser = $_SERVER["HTTP_USER_AGENT"];
-                    //     sendErrorServer($client,$dataServer,$browser);
-                    // ?>
+        setTimeout(function () {
+            //обработка 
+            xhr.onreadystatechange = function () {
+                // файлы уже отправлены и запрос завершился успешно
+                if (xhr.readyState == 4 && xhr.status == 200) {
+                    $('.ajax-loader').remove();
+                     let msg = $.parseJSON(xhr.responseText);
+                    if (msg.error_name) {
+                        console.log(msg.error_name)
                     }
                 }
-            },5);
-            xhr.send(formData);
-        // $.ajax({
-        //     url: 'serv.php',
-        //     data: data,
-        //     method: 'post',
-        //     dataType: 'json',
-        //     success: function (msg) {
-        //         $('.ajax-loader').remove();
-        //         if (msg.name) {
-                    
-        //             console.log(msg.name)
-        //         }
-        //     },
-        //     error: function (msg) {
-        //         $('.ajax-loader').remove();
-        //         console.log(msg)
-        //     }
-        // })
+            }
+        }, 5);
+        xhr.send(formData);
     }
 })
-
-
-
-// $('.ajax-form').on('submit', function (e) {
-//     e.preventDefault();
-//     let form = $(this),
-//         data = form.serialize(); //для того чтобы подготовить форму к отправке,она записывается как единый обьект 
-//         filled = true; // заполнены ли поля или нет
-
-//     form.find('.input-required').each(function () {
-//         if (!$(this).val()) {
-//             $(this).after('<p class="input-error">Ошибка.Поле обязательно для заполения</p>')
-//             filled = false;
-//         }
-//     });
-
-//     form.find('.checkbox-required').each(function () {
-//         if (!$(this).is(':checked')) {
-//             $(this).after('<p class="input-error">Ошибка.Поле обязательно для заполения</p>')
-//             filled = false;
-//         }
-//     });
-
-//     if (filled) {
-//         $.ajax({
-//             url: 'serv.php',
-//             data: data,
-//             method: 'post',
-//             dataType: 'json',
-//             success: function (msg) { ///msg???
-//                 console.log(msg);
-//             },
-//             error: function (msg) {
-//                 alert('Отправка не удалась. Ошибка :' + msg)
-//             }
-//         })
-//     }
-// })
-

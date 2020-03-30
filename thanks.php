@@ -8,7 +8,7 @@
 </head>
 <body>
     <?php  if (isset($_GET['name'])){ ?>
-  Спасибо, <?php echo $_GET['name']  ?>. Ваша зявка отправлена под номером.
+  Спасибо, <?php echo $_GET['name']  ?>. Ваша зявка отправлена.
     <?php }else{ ?>
         <script>
             window.location ='/';
